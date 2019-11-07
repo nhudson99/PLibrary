@@ -19,7 +19,7 @@ namespace PLibrary
 
         private void btnBookSearch_Click(object sender, EventArgs e)
         {
-            this.Close();
+            //this.Close();
         }
     }
 }
