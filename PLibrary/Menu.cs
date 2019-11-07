@@ -20,6 +20,30 @@ namespace PLibrary
         private void btnBookSearch_Click(object sender, EventArgs e)
         {
             //this.Close();
+            BookSearch bookSearch = new BookSearch();
+
+            bookSearch.Show();
+        }
+
+        private void btnProcessBook_Click(object sender, EventArgs e)
+        {
+            ProcessBooks procBooks = new ProcessBooks();
+
+            procBooks.Show();
+        }
+
+        private void btnTransaction_Click(object sender, EventArgs e)
+        {
+            Transactions trans = new Transactions();
+
+            trans.Show();
+        }
+
+        private void btnBookManagement_Click(object sender, EventArgs e)
+        {
+            BookManagement bookMan = new BookManagement();
+
+            bookMan.Show();
         }
     }
 }
