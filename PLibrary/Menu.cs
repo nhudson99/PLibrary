@@ -41,7 +41,6 @@ namespace PLibrary
 
         private void btnBookSearch_Click(object sender, EventArgs e)
         {
-            //this.Close();
             BookSearch frm = new BookSearch();
             frm.DBConnection = sqlConnection;
             frm.Show();

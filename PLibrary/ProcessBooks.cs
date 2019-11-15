@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace PLibrary
 {
@@ -19,31 +11,29 @@ namespace PLibrary
         public ProcessBooks()
         {
             InitializeComponent();
+
+        }
+        private void ProcessBooks_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void Btn_CheckOut_Click(object sender, EventArgs e)
+        {
+            CheckOut frm = new CheckOut();
+            frm.DBConnection2 = DBConnection;
+            frm.Show();
         }
 
-        private void Label1_Click(object sender, EventArgs e)
+        private void Btn_CheckIn_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void SelectAccount_SelectedIndexChanged(object sender, EventArgs e)
+        private void Btn_PlaceHold_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void SelectAction_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Cancel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Process_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
