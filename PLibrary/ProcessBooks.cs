@@ -8,10 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Data.SqlClient;
+
 namespace PLibrary
 {
     public partial class ProcessBooks : Form
     {
+        public SqlConnection DBConnection;
+
         public ProcessBooks()
         {
             InitializeComponent();

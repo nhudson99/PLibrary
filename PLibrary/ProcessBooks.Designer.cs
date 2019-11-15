@@ -42,18 +42,20 @@
             // SelectAccount
             // 
             SelectAccount.FormattingEnabled = true;
-            SelectAccount.Location = new System.Drawing.Point(28, 38);
+            SelectAccount.Location = new System.Drawing.Point(21, 31);
+            SelectAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             SelectAccount.Name = "SelectAccount";
-            SelectAccount.Size = new System.Drawing.Size(273, 24);
+            SelectAccount.Size = new System.Drawing.Size(206, 21);
             SelectAccount.TabIndex = 0;
             SelectAccount.SelectedIndexChanged += new System.EventHandler(this.SelectAccount_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 18);
+            this.label1.Location = new System.Drawing.Point(19, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 17);
+            this.label1.Size = new System.Drawing.Size(80, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Select Account";
             this.label1.Click += new System.EventHandler(this.Label1_Click);
@@ -61,18 +63,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(321, 18);
+            this.label2.Location = new System.Drawing.Point(241, 15);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 17);
+            this.label2.Size = new System.Drawing.Size(70, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Select Action";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(497, 18);
+            this.label3.Location = new System.Drawing.Point(373, 15);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 17);
+            this.label3.Size = new System.Drawing.Size(46, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Book ID";
             // 
@@ -83,17 +87,19 @@
             "Check Out Book",
             "Check In Book",
             "Place Hold"});
-            this.SelectAction.Location = new System.Drawing.Point(324, 38);
+            this.SelectAction.Location = new System.Drawing.Point(243, 31);
+            this.SelectAction.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SelectAction.Name = "SelectAction";
-            this.SelectAction.Size = new System.Drawing.Size(151, 24);
+            this.SelectAction.Size = new System.Drawing.Size(114, 21);
             this.SelectAction.TabIndex = 4;
             this.SelectAction.SelectedIndexChanged += new System.EventHandler(this.SelectAction_SelectedIndexChanged);
             // 
             // Process
             // 
-            this.Process.Location = new System.Drawing.Point(559, 168);
+            this.Process.Location = new System.Drawing.Point(419, 136);
+            this.Process.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Process.Name = "Process";
-            this.Process.Size = new System.Drawing.Size(91, 38);
+            this.Process.Size = new System.Drawing.Size(68, 31);
             this.Process.TabIndex = 6;
             this.Process.Text = "Process";
             this.Process.UseVisualStyleBackColor = true;
@@ -101,9 +107,10 @@
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(457, 168);
+            this.Cancel.Location = new System.Drawing.Point(343, 136);
+            this.Cancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(91, 38);
+            this.Cancel.Size = new System.Drawing.Size(68, 31);
             this.Cancel.TabIndex = 7;
             this.Cancel.Text = "Cancel";
             this.Cancel.UseVisualStyleBackColor = true;
@@ -111,16 +118,17 @@
             // 
             // SelectBook
             // 
-            this.SelectBook.Location = new System.Drawing.Point(500, 40);
+            this.SelectBook.Location = new System.Drawing.Point(375, 32);
+            this.SelectBook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SelectBook.Name = "SelectBook";
-            this.SelectBook.Size = new System.Drawing.Size(150, 22);
+            this.SelectBook.Size = new System.Drawing.Size(114, 20);
             this.SelectBook.TabIndex = 8;
             // 
             // ProcessBooks
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(682, 235);
+            this.ClientSize = new System.Drawing.Size(512, 191);
             this.Controls.Add(this.SelectBook);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.Process);
@@ -129,6 +137,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(SelectAccount);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ProcessBooks";
             this.Text = "ProcessBooks";
             this.ResumeLayout(false);

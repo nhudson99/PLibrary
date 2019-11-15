@@ -8,10 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Data.SqlClient;
+
 namespace PLibrary
 {
     public partial class BookSearch : Form
     {
+        public SqlConnection DBConnection;
+
         public BookSearch()
         {
             InitializeComponent();
