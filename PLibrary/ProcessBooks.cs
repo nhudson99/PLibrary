@@ -22,7 +22,22 @@ namespace PLibrary
 
         }
 
-        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void SelectAccount_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SelectAction_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Process_Click(object sender, EventArgs e)
         {
 
         }

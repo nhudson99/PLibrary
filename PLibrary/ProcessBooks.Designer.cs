@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ComboBox comboAcc;
+            System.Windows.Forms.ComboBox SelectAccount;
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            comboAcc = new System.Windows.Forms.ComboBox();
+            this.SelectAction = new System.Windows.Forms.ComboBox();
+            this.Process = new System.Windows.Forms.Button();
+            this.Cancel = new System.Windows.Forms.Button();
+            this.SelectBook = new System.Windows.Forms.TextBox();
+            SelectAccount = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // comboAcc
+            // SelectAccount
             // 
-            comboAcc.FormattingEnabled = true;
-            comboAcc.Location = new System.Drawing.Point(28, 38);
-            comboAcc.Name = "comboAcc";
-            comboAcc.Size = new System.Drawing.Size(273, 24);
-            comboAcc.TabIndex = 0;
-            comboAcc.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
+            SelectAccount.FormattingEnabled = true;
+            SelectAccount.Location = new System.Drawing.Point(28, 38);
+            SelectAccount.Name = "SelectAccount";
+            SelectAccount.Size = new System.Drawing.Size(273, 24);
+            SelectAccount.TabIndex = 0;
+            SelectAccount.SelectedIndexChanged += new System.EventHandler(this.SelectAccount_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -76,53 +76,59 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Book ID";
             // 
-            // comboBox2
+            // SelectAction
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(324, 38);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(151, 24);
-            this.comboBox2.TabIndex = 4;
+            this.SelectAction.FormattingEnabled = true;
+            this.SelectAction.Items.AddRange(new object[] {
+            "Check Out Book",
+            "Check In Book",
+            "Place Hold"});
+            this.SelectAction.Location = new System.Drawing.Point(324, 38);
+            this.SelectAction.Name = "SelectAction";
+            this.SelectAction.Size = new System.Drawing.Size(151, 24);
+            this.SelectAction.TabIndex = 4;
+            this.SelectAction.SelectedIndexChanged += new System.EventHandler(this.SelectAction_SelectedIndexChanged);
             // 
-            // comboBox3
+            // Process
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(500, 38);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(273, 24);
-            this.comboBox3.TabIndex = 5;
+            this.Process.Location = new System.Drawing.Point(559, 168);
+            this.Process.Name = "Process";
+            this.Process.Size = new System.Drawing.Size(91, 38);
+            this.Process.TabIndex = 6;
+            this.Process.Text = "Process";
+            this.Process.UseVisualStyleBackColor = true;
+            this.Process.Click += new System.EventHandler(this.Process_Click);
             // 
-            // button1
+            // Cancel
             // 
-            this.button1.Location = new System.Drawing.Point(703, 177);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 38);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Process";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Cancel.Location = new System.Drawing.Point(457, 168);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(91, 38);
+            this.Cancel.TabIndex = 7;
+            this.Cancel.Text = "Cancel";
+            this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
-            // button2
+            // SelectBook
             // 
-            this.button2.Location = new System.Drawing.Point(601, 177);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 38);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
+            this.SelectBook.Location = new System.Drawing.Point(500, 40);
+            this.SelectBook.Name = "SelectBook";
+            this.SelectBook.Size = new System.Drawing.Size(150, 22);
+            this.SelectBook.TabIndex = 8;
             // 
             // ProcessBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(806, 227);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
+            this.ClientSize = new System.Drawing.Size(682, 235);
+            this.Controls.Add(this.SelectBook);
+            this.Controls.Add(this.Cancel);
+            this.Controls.Add(this.Process);
+            this.Controls.Add(this.SelectAction);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(comboAcc);
+            this.Controls.Add(SelectAccount);
             this.Name = "ProcessBooks";
             this.Text = "ProcessBooks";
             this.ResumeLayout(false);
@@ -134,9 +140,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox SelectAction;
+        private System.Windows.Forms.Button Process;
+        private System.Windows.Forms.Button Cancel;
+        private System.Windows.Forms.TextBox SelectBook;
     }
 }
