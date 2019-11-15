@@ -26,7 +26,7 @@ namespace PLibrary
             try
             {
                 sqlConnection.ConnectionString =
-                    "Data Source=DESKTOP-AT9IVS9;" + // Change to your server name
+                    "Data Source=DESKTOP-AT9IVS9;" + // Change to your server name ------------
                     "Initial Catalog=PLibrary;" +
                     "Integrated Security=True";
                 sqlConnection.Open();

@@ -63,11 +63,6 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="PLibraryDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PLibraryDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="ProcessBooks.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,17 +92,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="PLibraryDataSet.xsc">
-      <DependentUpon>PLibraryDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="PLibraryDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PLibraryDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="PLibraryDataSet.xss">
-      <DependentUpon>PLibraryDataSet.xsd</DependentUpon>
-    </None>
+    <EmbeddedResource Include="Transactions.resx">
+      <DependentUpon>Transactions.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
