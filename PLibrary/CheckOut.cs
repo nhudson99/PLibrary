@@ -45,7 +45,7 @@ namespace PLibrary
         void LoadBooks()
         {
             SqlCommand cmdLoadBook = DBConnection2.CreateCommand();
-            cmdLoadBook.CommandText = "Select BOOK_ID FROM  BOOK";
+            cmdLoadBook.CommandText = "Select BOOK_ID FROM BOOK WHERE Available > 0";
             SqlDataReader reader = cmdLoadBook.ExecuteReader();
 
             while (reader.Read())
@@ -67,21 +67,54 @@ namespace PLibrary
             cmdNewTrans.Parameters.AddWithValue("@Date", Tdate);
             cmdNewTrans.Parameters.AddWithValue("@DueDate", Ddate);
 
-             // t is Transaction_ID
+            // t is Transaction_ID
             int t = (int)cmdNewTrans.ExecuteScalar(); 
 
             return t;
         }
 
+        void NewContains_Book(int B_ID, int T_ID)
+        {
+            SqlCommand cmdNew = DBConnection2.CreateCommand();
+            cmdNew.CommandText = "INSERT INTO CONTAINS_BOOK VALUES(@T_ID,@B_ID,@r)";
+            cmdNew.Parameters.AddWithValue("@T_ID", T_ID);
+            cmdNew.Parameters.AddWithValue("@B_ID", B_ID);
+            cmdNew.Parameters.AddWithValue("@r", 'n');
+            try
+            {
+                cmdNew.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            { // exception for trying to checkout 2 copies of same book in one transaction
+                MessageBox.Show("Only 1 copy per Transaction");
+            }
+        }
+
+        void DecrementBookCount(int bno)
+        {
+            SqlCommand cmdDec = DBConnection2.CreateCommand();
+            cmdDec.CommandText = "UPDATE BOOK SET Available = Available - 1 WHERE Book_ID = @B_ID";
+            cmdDec.Parameters.AddWithValue("@B_ID", bno);
+            cmdDec.ExecuteNonQuery();
+        }
         private void Btn_Start_Click(object sender, EventArgs e)
         {
-            SelectAcc.Enabled = false; //  prevent student change during transaction
+            if (SelectAcc.SelectedItem != null)
+            {
+                SelectAcc.Enabled = false; //  prevent account change during transaction
+                btn_Start.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("Please select a valid account");
+            }
         }
 
         private void Btn_End_Click(object sender, EventArgs e)
         {
             // reset
             SelectAcc.Enabled = true;
+            btn_Start.Enabled = true;
             books = 0;
         }
 
@@ -91,17 +124,15 @@ namespace PLibrary
             {
                 books++;
                 if (books == 1)
-                {   // check number of book copies available
-                    if ()
-                    {
-
-                    }
-                    // CREATE new TRANSACTION for DB, get the auto-generated id
+                {   // CREATE new TRANSACTION for DB, get the auto-generated id
                     trans_ID = CreateTransaction();
                     MessageBox.Show(trans_ID.ToString());
                 }
-
                 // CREATE new CONATINS_BOOK
+                NewContains_Book(Int32.Parse(SelectBook.Text), trans_ID);
+                // Decrement 'Available'
+                DecrementBookCount(Int32.Parse(SelectBook.Text));
+                LoadBooks(); //reload book id's into combobox
             }
         }
     }

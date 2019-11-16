@@ -30,8 +30,6 @@ namespace PLibrary
                     "Initial Catalog=PLibrary;" +
                     "Integrated Security=True";
                 sqlConnection.Open();
-
-                MessageBox.Show("Db Connection Successful");
             }
             catch (Exception ex)
             {
