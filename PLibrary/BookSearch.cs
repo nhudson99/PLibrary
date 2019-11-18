@@ -94,6 +94,7 @@ namespace PLibrary
                     id = int.Parse(txtBookID.Text);
 
                 SearchResult result = new SearchResult(txtBookTitle.Text, txtBookAuthor.Text, txtBookCategory.Text, year, id);
+                result.DBConnection2 = DBConnection;
                 result.Show();
             }
         }
