@@ -13,7 +13,9 @@ namespace PLibrary
 {
     public partial class BookManagement : Form
     {
-        private SqlConnection connection = new SqlConnection();
+
+        public SqlConnection DBConnection;
+
 
         public BookManagement()
         {

@@ -1,20 +1,41 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace PLibrary
 {
     public partial class ProcessBooks : Form
     {
+        public SqlConnection DBConnection;
+
         public ProcessBooks()
         {
             InitializeComponent();
+
         }
+        private void ProcessBooks_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void Btn_CheckOut_Click(object sender, EventArgs e)
+        {
+            CheckOut frm = new CheckOut();
+            frm.DBConnection2 = DBConnection;
+            frm.Show();
+        }
+
+        private void Btn_CheckIn_Click(object sender, EventArgs e)
+        {
+            CheckIn frm = new CheckIn();
+            frm.DBConnection2 = DBConnection;
+            frm.Show();
+        }
+
+        private void Btn_PlaceHold_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
