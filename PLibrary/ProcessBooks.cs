@@ -33,7 +33,9 @@ namespace PLibrary
 
         private void Btn_PlaceHold_Click(object sender, EventArgs e)
         {
-
+            PlaceHold frm = new PlaceHold();
+            frm.DBConnection2 = DBConnection;
+            frm.Show();
         }
 
         
