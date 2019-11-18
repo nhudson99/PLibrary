@@ -76,7 +76,7 @@ namespace PLibrary
             {
                 if (id != 0)
                 {
-                    cmdLoadBook.CommandText = "SELECT Book_ID as ID, Title, Name as Author, PYear, Section, Copies, Available " +
+                    cmdLoadBook.CommandText = "SELECT Distinct Book_ID as ID, Title, Name as Author, PYear, Section, Copies, Available " +
                     "FROM BOOK JOIN BOOK_AUTHOR ON BOOK.A_ID = BOOK_AUTHOR.A_ID JOIN AUTHOR ON Author_ID = BOOK_AUTHOR.A_ID JOIN CATEGORY ON C_ID = Category_ID " +
                     "WHERE Book_ID = @bookID";
 
@@ -84,7 +84,7 @@ namespace PLibrary
                 }
                 else if (year != 0)
                 {
-                    cmdLoadBook.CommandText = "SELECT Book_ID as ID, Title, Name as Author, PYear, Section, Copies, Available " +
+                    cmdLoadBook.CommandText = "SELECT Distinct Book_ID as ID, Title, Name as Author, PYear, Section, Copies, Available " +
                     "FROM BOOK JOIN BOOK_AUTHOR ON BOOK.A_ID = BOOK_AUTHOR.A_ID JOIN AUTHOR ON Author_ID = BOOK_AUTHOR.A_ID JOIN CATEGORY ON C_ID = Category_ID " +
                     "WHERE PYear = @year";
 
@@ -93,7 +93,7 @@ namespace PLibrary
                 else if (!String.IsNullOrEmpty(title))
                 {
                     //MessageBox.Show(title);
-                    cmdLoadBook.CommandText = "SELECT Book_ID as ID, Title, Name as Author, PYear, Section, Copies, Available " +
+                    cmdLoadBook.CommandText = "SELECT Distinct Book_ID as ID, Title, Name as Author, PYear, Section, Copies, Available " +
                     "FROM BOOK JOIN BOOK_AUTHOR ON BOOK.A_ID = BOOK_AUTHOR.A_ID JOIN AUTHOR ON Author_ID = BOOK_AUTHOR.A_ID JOIN CATEGORY ON C_ID = Category_ID " +
                     "WHERE Title = @title";
 
@@ -102,7 +102,7 @@ namespace PLibrary
                 }
                 else if (!String.IsNullOrEmpty(author))
                 {
-                    cmdLoadBook.CommandText = "SELECT Book_ID as ID, Title, Name as Author, PYear, Section, Copies, Available " +
+                    cmdLoadBook.CommandText = "SELECT Distinct Book_ID as ID, Title, Name as Author, PYear, Section, Copies, Available " +
                     "FROM BOOK JOIN BOOK_AUTHOR ON BOOK.A_ID = BOOK_AUTHOR.A_ID JOIN AUTHOR ON Author_ID = BOOK_AUTHOR.A_ID JOIN CATEGORY ON C_ID = Category_ID " +
                     "WHERE Name = @author";
 
@@ -110,7 +110,7 @@ namespace PLibrary
                 }
                 else if (!String.IsNullOrEmpty(category))
                 {
-                    cmdLoadBook.CommandText = "SELECT Book_ID as ID, Title, Name as Author, PYear, Section, Copies, Available " +
+                    cmdLoadBook.CommandText = "SELECT Distinct Book_ID as ID, Title, Name as Author, PYear, Section, Copies, Available " +
                     "FROM BOOK JOIN BOOK_AUTHOR ON BOOK.A_ID = BOOK_AUTHOR.A_ID JOIN AUTHOR ON Author_ID = BOOK_AUTHOR.A_ID JOIN CATEGORY ON C_ID = Category_ID " +
                     "WHERE Cname = @category";
 

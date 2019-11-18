@@ -83,6 +83,9 @@
     <Compile Include="Transactions.Designer.cs">
       <DependentUpon>Transactions.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BookManagement.resx">
+      <DependentUpon>BookManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BookSearch.resx">
       <DependentUpon>BookSearch.cs</DependentUpon>
     </EmbeddedResource>
