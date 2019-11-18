@@ -45,7 +45,7 @@ namespace PLibrary
         void LoadBooks()
         {
             SqlCommand cmdLoadBook = DBConnection2.CreateCommand();
-            cmdLoadBook.CommandText = "Select BOOK_ID FROM BOOK WHERE Available > 0";
+            cmdLoadBook.CommandText = "Select Book_ID FROM BOOK WHERE Available > 0";
             SqlDataReader reader = cmdLoadBook.ExecuteReader();
 
             while (reader.Read())
@@ -62,7 +62,7 @@ namespace PLibrary
 
             SqlCommand cmdNewTrans = DBConnection2.CreateCommand();
             cmdNewTrans.CommandText = "INSERT INTO [TRANSACTION] (S_ID, Date, DueDate)";
-            cmdNewTrans.CommandText += "OUTPUT INSERTED.Transaction_ID VALUES (@S_ID, @Date, @DueDate)";
+            cmdNewTrans.CommandText += " OUTPUT INSERTED.Transaction_ID VALUES (@S_ID, @Date, @DueDate)";
             cmdNewTrans.Parameters.AddWithValue("@S_ID", SelectAcc.Text);
             cmdNewTrans.Parameters.AddWithValue("@Date", Tdate);
             cmdNewTrans.Parameters.AddWithValue("@DueDate", Ddate);
