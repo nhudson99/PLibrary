@@ -25,6 +25,10 @@ namespace PLibrary
 
         private void CheckOut_Load(object sender, EventArgs e)
         {
+            btn_End.Enabled = false;
+            SelectBook.Enabled = false;
+            btn_Process.Enabled = false;
+
             LoadAccounts();
             LoadBooks();
         }
@@ -84,7 +88,7 @@ namespace PLibrary
             {
                 cmdNew.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch
             { // exception for trying to checkout 2 copies of same book in one transaction
                 MessageBox.Show("Only 1 copy per Transaction");
             }
@@ -103,6 +107,9 @@ namespace PLibrary
             {
                 SelectAcc.Enabled = false; //  prevent account change during transaction
                 btn_Start.Enabled = false;
+                btn_End.Enabled = true;
+                SelectBook.Enabled = true;
+                btn_Process.Enabled = true;
             }
             else
             {
@@ -115,6 +122,9 @@ namespace PLibrary
             // reset
             SelectAcc.Enabled = true;
             btn_Start.Enabled = true;
+            btn_End.Enabled = false;
+            SelectBook.Enabled = false;
+            btn_Process.Enabled = false;
             books = 0;
         }
 
