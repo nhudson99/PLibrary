@@ -15,7 +15,7 @@ namespace PLibrary
     {
         private String title, author, category;
         private int year, id;
-        private SqlConnection connection = new SqlConnection();
+        public SqlConnection DBConnection2;
 
         public SearchResult(String title, String author, String category, int year, int id)
         {
@@ -41,22 +41,6 @@ namespace PLibrary
         private void SearchResult_Load(object sender, EventArgs e)
         {
             this.AutoSize = true;
-            try
-            {
-                connection.ConnectionString =
-                    "Data Source=NATE-SURFACE;" +
-                    "Initial Catalog=PLibrary;" +
-                    "Integrated Security=True";
-                connection.Open();
-
-                //MessageBox.Show("Db Connection Successful");
-
-
-            }
-            catch (Exception connectionError)
-            {
-                MessageBox.Show(connectionError.Message);
-            }
 
             try
             {
@@ -70,7 +54,7 @@ namespace PLibrary
 
         private void LoadGrid()
         {
-            SqlCommand cmdLoadBook = connection.CreateCommand();
+            SqlCommand cmdLoadBook = DBConnection2.CreateCommand();
 
             try
             {
