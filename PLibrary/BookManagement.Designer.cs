@@ -35,12 +35,12 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.btnPopulate = new System.Windows.Forms.Button();
             this.txtTitle = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtAuthor = new System.Windows.Forms.TextBox();
             this.Title = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtYear = new System.Windows.Forms.TextBox();
+            this.txtCategory = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnCompleteEdit = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -105,12 +105,12 @@
             this.txtTitle.Size = new System.Drawing.Size(312, 31);
             this.txtTitle.TabIndex = 6;
             // 
-            // textBox2
+            // txtAuthor
             // 
-            this.textBox2.Location = new System.Drawing.Point(488, 272);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(312, 31);
-            this.textBox2.TabIndex = 8;
+            this.txtAuthor.Location = new System.Drawing.Point(488, 272);
+            this.txtAuthor.Name = "txtAuthor";
+            this.txtAuthor.Size = new System.Drawing.Size(312, 31);
+            this.txtAuthor.TabIndex = 8;
             // 
             // Title
             // 
@@ -139,19 +139,19 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Year of Publication";
             // 
-            // textBox3
+            // txtYear
             // 
-            this.textBox3.Location = new System.Drawing.Point(488, 362);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(312, 31);
-            this.textBox3.TabIndex = 11;
+            this.txtYear.Location = new System.Drawing.Point(488, 362);
+            this.txtYear.Name = "txtYear";
+            this.txtYear.Size = new System.Drawing.Size(312, 31);
+            this.txtYear.TabIndex = 11;
             // 
-            // textBox4
+            // txtCategory
             // 
-            this.textBox4.Location = new System.Drawing.Point(487, 457);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(312, 31);
-            this.textBox4.TabIndex = 12;
+            this.txtCategory.Location = new System.Drawing.Point(487, 457);
+            this.txtCategory.Name = "txtCategory";
+            this.txtCategory.Size = new System.Drawing.Size(312, 31);
+            this.txtCategory.TabIndex = 12;
             // 
             // label4
             // 
@@ -179,11 +179,11 @@
             this.ClientSize = new System.Drawing.Size(1443, 828);
             this.Controls.Add(this.btnCompleteEdit);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtCategory);
+            this.Controls.Add(this.txtYear);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtAuthor);
             this.Controls.Add(this.Title);
             this.Controls.Add(this.txtTitle);
             this.Controls.Add(this.btnPopulate);
@@ -209,12 +209,12 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Button btnPopulate;
         private System.Windows.Forms.TextBox txtTitle;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtAuthor;
         private System.Windows.Forms.Label Title;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtYear;
+        private System.Windows.Forms.TextBox txtCategory;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnCompleteEdit;
     }

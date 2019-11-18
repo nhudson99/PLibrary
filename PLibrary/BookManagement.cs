@@ -25,13 +25,15 @@ namespace PLibrary
         private void DisableControls()
         {
             txtTitle.Enabled = false;
+            txtAuthor.Enabled = false;
+            txtYear.Enabled = false;
         }
 
         private void btnPopulate_Click(object sender, EventArgs e)
         {
             SqlCommand cmdLoadControls = DBConnection.CreateCommand();
 
-            cmdLoadControls.CommandText = "SELECT Book_ID as ID, Title, Name as Author, PYear, Cname, Copies " +
+            cmdLoadControls.CommandText = "SELECT Distinct Book_ID as ID, Title, Name as Author, PYear, Cname, Copies " +
                     "FROM BOOK JOIN BOOK_AUTHOR ON BOOK.A_ID = BOOK_AUTHOR.A_ID JOIN AUTHOR ON Author_ID = BOOK_AUTHOR.A_ID JOIN CATEGORY ON C_ID = Category_ID " +
                     "WHERE Book_ID = @bookID";
 
