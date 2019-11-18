@@ -26,7 +26,9 @@ namespace PLibrary
 
         private void Btn_CheckIn_Click(object sender, EventArgs e)
         {
-
+            CheckIn frm = new CheckIn();
+            frm.DBConnection2 = DBConnection;
+            frm.Show();
         }
 
         private void Btn_PlaceHold_Click(object sender, EventArgs e)
