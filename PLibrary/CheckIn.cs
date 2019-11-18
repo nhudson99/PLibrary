@@ -48,7 +48,7 @@ namespace PLibrary
             cmdLoadBook.CommandText = "Select Book_ID, T_ID " +
                 "FROM BOOK JOIN CONTAINS_BOOK ON Book_ID = B_ID" +
                 " JOIN [TRANSACTION] ON T_ID = Transaction_ID" +
-                " WHERE (@S_ID = 2) AND (Returned = @r)";
+                " WHERE (S_ID = @S_ID) AND (Returned = @r)";
             cmdLoadBook.Parameters.AddWithValue("@S_ID", acc);
             cmdLoadBook.Parameters.AddWithValue("@r", 'n'); // nonreturned book
             SqlDataReader reader = cmdLoadBook.ExecuteReader();
