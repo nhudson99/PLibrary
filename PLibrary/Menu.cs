@@ -32,7 +32,7 @@ namespace PLibrary
                 sqlConnection.Open();*/
 
                 sqlConnection.ConnectionString =
-                    "Data Source=DESKTOP-AT9IVS9;" +
+                    "Data Source=NATE-SURFACE;" +
                     "Initial Catalog=PLibrary;" +
                     "Integrated Security=True";
                 sqlConnection.Open();

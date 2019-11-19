@@ -43,6 +43,7 @@
             this.txtCategory = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnCompleteEdit = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -53,6 +54,7 @@
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnEdit
             // 
@@ -172,11 +174,22 @@
             this.btnCompleteEdit.UseVisualStyleBackColor = true;
             this.btnCompleteEdit.Visible = false;
             // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(911, 175);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(195, 36);
+            this.btnClear.TabIndex = 15;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // BookManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1443, 828);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnCompleteEdit);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtCategory);
@@ -217,5 +230,6 @@
         private System.Windows.Forms.TextBox txtCategory;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnCompleteEdit;
+        private System.Windows.Forms.Button btnClear;
     }
 }
