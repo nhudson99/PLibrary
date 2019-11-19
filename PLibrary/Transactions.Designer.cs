@@ -151,7 +151,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(499, 162);
+            this.label8.Location = new System.Drawing.Point(534, 162);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(57, 13);
             this.label8.TabIndex = 12;
@@ -162,12 +162,12 @@
             this.BookAuthor.Location = new System.Drawing.Point(281, 178);
             this.BookAuthor.Multiline = true;
             this.BookAuthor.Name = "BookAuthor";
-            this.BookAuthor.Size = new System.Drawing.Size(191, 401);
+            this.BookAuthor.Size = new System.Drawing.Size(229, 401);
             this.BookAuthor.TabIndex = 13;
             // 
             // Returned
             // 
-            this.Returned.Location = new System.Drawing.Point(502, 178);
+            this.Returned.Location = new System.Drawing.Point(537, 178);
             this.Returned.Multiline = true;
             this.Returned.Name = "Returned";
             this.Returned.Size = new System.Drawing.Size(60, 401);

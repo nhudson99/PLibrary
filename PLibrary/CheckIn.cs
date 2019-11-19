@@ -110,7 +110,8 @@ namespace PLibrary
             SelectBook.Text = "";
             SelectBook.Items.RemoveAt(SelectBook.SelectedIndex);
             btn_Process.Enabled = false;
-            
+            MessageBox.Show("Book Checked In");
+
         }
 
         

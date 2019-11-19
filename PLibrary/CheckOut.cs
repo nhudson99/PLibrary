@@ -136,13 +136,13 @@ namespace PLibrary
                 if (books == 1)
                 {   // CREATE new TRANSACTION for DB, get the auto-generated id
                     trans_ID = CreateTransaction();
-                    MessageBox.Show(trans_ID.ToString());
                 }
                 // CREATE new CONATINS_BOOK
                 NewContains_Book(Int32.Parse(SelectBook.Text), trans_ID);
                 // Decrement 'Available'
                 DecrementBookCount(Int32.Parse(SelectBook.Text));
                 LoadBooks(); //reload book id's into combobox
+                MessageBox.Show("Book Checked Out, Due in 2 weeks");
             }
         }
     }
