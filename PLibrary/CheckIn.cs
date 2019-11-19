@@ -32,12 +32,12 @@ namespace PLibrary
         void LoadAccounts()
         {
             SqlCommand cmdLoadAcc = DBConnection2.CreateCommand();
-            cmdLoadAcc.CommandText = "Select Student_ID FROM  STUDENT";
+            cmdLoadAcc.CommandText = "Select Student_ID, Fname FROM  STUDENT";
             SqlDataReader reader = cmdLoadAcc.ExecuteReader();
 
             while (reader.Read())
             {
-                SelectAcc.Items.Add(reader[0].ToString());
+                SelectAcc.Items.Add(reader[0].ToString() + ", " + reader[1].ToString());
             }
             reader.Close();
         }
@@ -80,7 +80,7 @@ namespace PLibrary
             TransactionView.Items.Clear();
             TransactionView.ResetText();
 
-            LoadBooks(Int32.Parse(SelectAcc.Text));
+            LoadBooks(Int32.Parse(SelectAcc.Text.Substring(0, 1)));
 
             SelectBook.Enabled = true;
             btn_Process.Enabled = false;

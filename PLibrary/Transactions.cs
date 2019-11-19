@@ -28,12 +28,12 @@ namespace PLibrary
         void LoadAccounts()
         {
             SqlCommand cmdLoadAcc = DBConnection.CreateCommand();
-            cmdLoadAcc.CommandText = "Select Student_ID FROM  STUDENT";
+            cmdLoadAcc.CommandText = "Select Student_ID, Fname FROM  STUDENT";
             SqlDataReader reader = cmdLoadAcc.ExecuteReader();
 
             while (reader.Read())
             {
-                SelectAcc.Items.Add(reader[0].ToString());
+                SelectAcc.Items.Add(reader[0].ToString() + ", " + reader[1].ToString());
             }
             reader.Close();
         }
@@ -98,7 +98,7 @@ namespace PLibrary
             tDate.Text = "";
             dDate.Text = "";
 
-            LoadTransactions(Int32.Parse(SelectAcc.Text));
+            LoadTransactions(Int32.Parse(SelectAcc.Text.Substring(0,1)));
         }
 
         private void SelectTrans_SelectedIndexChanged(object sender, EventArgs e)

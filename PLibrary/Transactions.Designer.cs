@@ -50,7 +50,7 @@
             this.SelectAcc.FormattingEnabled = true;
             this.SelectAcc.Location = new System.Drawing.Point(21, 31);
             this.SelectAcc.Name = "SelectAcc";
-            this.SelectAcc.Size = new System.Drawing.Size(121, 21);
+            this.SelectAcc.Size = new System.Drawing.Size(195, 21);
             this.SelectAcc.TabIndex = 0;
             this.SelectAcc.SelectedIndexChanged += new System.EventHandler(this.SelectAcc_SelectedIndexChanged);
             // 
@@ -66,7 +66,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(163, 15);
+            this.label2.Location = new System.Drawing.Point(278, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 2;
@@ -75,7 +75,7 @@
             // SelectTrans
             // 
             this.SelectTrans.FormattingEnabled = true;
-            this.SelectTrans.Location = new System.Drawing.Point(166, 31);
+            this.SelectTrans.Location = new System.Drawing.Point(281, 31);
             this.SelectTrans.Name = "SelectTrans";
             this.SelectTrans.Size = new System.Drawing.Size(121, 21);
             this.SelectTrans.TabIndex = 3;
