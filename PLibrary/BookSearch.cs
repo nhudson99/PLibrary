@@ -34,7 +34,7 @@ namespace PLibrary
         {
             if (String.IsNullOrEmpty(txtBookTitle.Text)    &&
                 String.IsNullOrEmpty(txtBookAuthor.Text)   &&
-                String.IsNullOrEmpty(txtBookCategory.Text) &&
+                String.IsNullOrEmpty(comboCategory.Text) &&
                 String.IsNullOrEmpty(txtBookYear.Text)     &&
                 String.IsNullOrEmpty(txtBookID.Text))
             {
@@ -93,9 +93,32 @@ namespace PLibrary
                 if (!String.IsNullOrEmpty(txtBookID.Text))
                     id = int.Parse(txtBookID.Text);
 
-                SearchResult result = new SearchResult(txtBookTitle.Text, txtBookAuthor.Text, txtBookCategory.Text, year, id);
+                SearchResult result = new SearchResult(txtBookTitle.Text, txtBookAuthor.Text, comboCategory.Text, year, id);
                 result.DBConnection2 = DBConnection;
                 result.Show();
+            }
+        }
+
+        private void BookSearch_Load(object sender, EventArgs e)
+        {
+            SqlCommand cmdLoadCategory = DBConnection.CreateCommand();
+
+            cmdLoadCategory.CommandText = "SELECT * FROM CATEGORY";
+
+            SqlDataReader reader = cmdLoadCategory.ExecuteReader();
+
+            while (reader.Read())
+            {
+                comboCategory.Items.Add(reader[1].ToString());
+            }
+            reader.Close();
+        }
+
+        private void comboCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (btnSearchBook.Enabled == false)
+            {
+                btnSearchBook.Enabled = true;
             }
         }
     }

@@ -36,10 +36,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtBookTitle = new System.Windows.Forms.TextBox();
             this.txtBookAuthor = new System.Windows.Forms.TextBox();
-            this.txtBookCategory = new System.Windows.Forms.TextBox();
             this.txtBookYear = new System.Windows.Forms.TextBox();
             this.txtBookID = new System.Windows.Forms.TextBox();
             this.btnSearchBook = new System.Windows.Forms.Button();
+            this.comboCategory = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -112,14 +112,6 @@
             this.txtBookAuthor.TabIndex = 7;
             this.txtBookAuthor.TextChanged += new System.EventHandler(this.txtBookAuthor_TextChanged);
             // 
-            // txtBookCategory
-            // 
-            this.txtBookCategory.Location = new System.Drawing.Point(411, 294);
-            this.txtBookCategory.Name = "txtBookCategory";
-            this.txtBookCategory.Size = new System.Drawing.Size(343, 31);
-            this.txtBookCategory.TabIndex = 8;
-            this.txtBookCategory.TextChanged += new System.EventHandler(this.txtBookCategory_TextChanged);
-            // 
             // txtBookYear
             // 
             this.txtBookYear.Location = new System.Drawing.Point(411, 356);
@@ -146,15 +138,24 @@
             this.btnSearchBook.UseVisualStyleBackColor = true;
             this.btnSearchBook.Click += new System.EventHandler(this.btnSearchBook_Click);
             // 
+            // comboCategory
+            // 
+            this.comboCategory.FormattingEnabled = true;
+            this.comboCategory.Location = new System.Drawing.Point(411, 297);
+            this.comboCategory.Name = "comboCategory";
+            this.comboCategory.Size = new System.Drawing.Size(343, 33);
+            this.comboCategory.TabIndex = 12;
+            this.comboCategory.SelectedIndexChanged += new System.EventHandler(this.comboCategory_SelectedIndexChanged);
+            // 
             // BookSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1237, 757);
+            this.Controls.Add(this.comboCategory);
             this.Controls.Add(this.btnSearchBook);
             this.Controls.Add(this.txtBookID);
             this.Controls.Add(this.txtBookYear);
-            this.Controls.Add(this.txtBookCategory);
             this.Controls.Add(this.txtBookAuthor);
             this.Controls.Add(this.txtBookTitle);
             this.Controls.Add(this.label6);
@@ -165,6 +166,7 @@
             this.Controls.Add(this.label1);
             this.Name = "BookSearch";
             this.Text = "BookSearch";
+            this.Load += new System.EventHandler(this.BookSearch_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,9 +182,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtBookTitle;
         private System.Windows.Forms.TextBox txtBookAuthor;
-        private System.Windows.Forms.TextBox txtBookCategory;
         private System.Windows.Forms.TextBox txtBookYear;
         private System.Windows.Forms.TextBox txtBookID;
         private System.Windows.Forms.Button btnSearchBook;
+        private System.Windows.Forms.ComboBox comboCategory;
     }
 }

@@ -40,7 +40,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtYear = new System.Windows.Forms.TextBox();
-            this.txtCategory = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnCompleteEdit = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
@@ -48,6 +47,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtCopies = new System.Windows.Forms.TextBox();
             this.txtAvailable = new System.Windows.Forms.TextBox();
+            this.comboCategory = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -68,6 +68,7 @@
             this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
@@ -77,6 +78,7 @@
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // label1
             // 
@@ -152,13 +154,6 @@
             this.txtYear.Size = new System.Drawing.Size(312, 31);
             this.txtYear.TabIndex = 11;
             // 
-            // txtCategory
-            // 
-            this.txtCategory.Location = new System.Drawing.Point(488, 419);
-            this.txtCategory.Name = "txtCategory";
-            this.txtCategory.Size = new System.Drawing.Size(312, 31);
-            this.txtCategory.TabIndex = 12;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -170,13 +165,14 @@
             // 
             // btnCompleteEdit
             // 
-            this.btnCompleteEdit.Location = new System.Drawing.Point(553, 705);
+            this.btnCompleteEdit.Location = new System.Drawing.Point(552, 705);
             this.btnCompleteEdit.Name = "btnCompleteEdit";
             this.btnCompleteEdit.Size = new System.Drawing.Size(247, 74);
             this.btnCompleteEdit.TabIndex = 14;
             this.btnCompleteEdit.Text = "Complete Edit";
             this.btnCompleteEdit.UseVisualStyleBackColor = true;
             this.btnCompleteEdit.Visible = false;
+            this.btnCompleteEdit.Click += new System.EventHandler(this.btnCompleteEdit_Click);
             // 
             // btnClear
             // 
@@ -220,11 +216,20 @@
             this.txtAvailable.Size = new System.Drawing.Size(312, 31);
             this.txtAvailable.TabIndex = 19;
             // 
+            // comboCategory
+            // 
+            this.comboCategory.FormattingEnabled = true;
+            this.comboCategory.Location = new System.Drawing.Point(488, 416);
+            this.comboCategory.Name = "comboCategory";
+            this.comboCategory.Size = new System.Drawing.Size(311, 33);
+            this.comboCategory.TabIndex = 20;
+            // 
             // BookManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1443, 828);
+            this.Controls.Add(this.comboCategory);
             this.Controls.Add(this.txtAvailable);
             this.Controls.Add(this.txtCopies);
             this.Controls.Add(this.label6);
@@ -232,7 +237,6 @@
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnCompleteEdit);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtCategory);
             this.Controls.Add(this.txtYear);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -267,7 +271,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtYear;
-        private System.Windows.Forms.TextBox txtCategory;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnCompleteEdit;
         private System.Windows.Forms.Button btnClear;
@@ -275,5 +278,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtCopies;
         private System.Windows.Forms.TextBox txtAvailable;
+        private System.Windows.Forms.ComboBox comboCategory;
     }
 }
