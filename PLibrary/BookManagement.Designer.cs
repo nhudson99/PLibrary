@@ -44,6 +44,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnCompleteEdit = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtCopies = new System.Windows.Forms.TextBox();
+            this.txtAvailable = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -135,7 +139,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(230, 362);
+            this.label3.Location = new System.Drawing.Point(230, 350);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(194, 25);
             this.label3.TabIndex = 10;
@@ -143,14 +147,14 @@
             // 
             // txtYear
             // 
-            this.txtYear.Location = new System.Drawing.Point(488, 362);
+            this.txtYear.Location = new System.Drawing.Point(488, 344);
             this.txtYear.Name = "txtYear";
             this.txtYear.Size = new System.Drawing.Size(312, 31);
             this.txtYear.TabIndex = 11;
             // 
             // txtCategory
             // 
-            this.txtCategory.Location = new System.Drawing.Point(487, 457);
+            this.txtCategory.Location = new System.Drawing.Point(488, 419);
             this.txtCategory.Name = "txtCategory";
             this.txtCategory.Size = new System.Drawing.Size(312, 31);
             this.txtCategory.TabIndex = 12;
@@ -158,7 +162,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(324, 457);
+            this.label4.Location = new System.Drawing.Point(324, 425);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 25);
             this.label4.TabIndex = 13;
@@ -184,11 +188,47 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(349, 499);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(79, 25);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Copies";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(324, 568);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(100, 25);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Available";
+            // 
+            // txtCopies
+            // 
+            this.txtCopies.Location = new System.Drawing.Point(487, 493);
+            this.txtCopies.Name = "txtCopies";
+            this.txtCopies.Size = new System.Drawing.Size(312, 31);
+            this.txtCopies.TabIndex = 18;
+            // 
+            // txtAvailable
+            // 
+            this.txtAvailable.Location = new System.Drawing.Point(487, 562);
+            this.txtAvailable.Name = "txtAvailable";
+            this.txtAvailable.Size = new System.Drawing.Size(312, 31);
+            this.txtAvailable.TabIndex = 19;
+            // 
             // BookManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1443, 828);
+            this.Controls.Add(this.txtAvailable);
+            this.Controls.Add(this.txtCopies);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnCompleteEdit);
             this.Controls.Add(this.label4);
@@ -231,5 +271,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnCompleteEdit;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtCopies;
+        private System.Windows.Forms.TextBox txtAvailable;
     }
 }
