@@ -41,7 +41,7 @@ namespace PLibrary
 
             while (reader.Read())
             {
-                SelectAcc.Items.Add(reader[0].ToString() + ", " + reader[1].ToString());
+                SelectAcc.Items.Add(reader[0].ToString() + "   " + reader[1].ToString());
             }
             reader.Close();
         }
@@ -67,7 +67,7 @@ namespace PLibrary
             SqlCommand cmdNewTrans = DBConnection2.CreateCommand();
             cmdNewTrans.CommandText = "INSERT INTO [TRANSACTION] (S_ID, Date, DueDate)";
             cmdNewTrans.CommandText += " OUTPUT INSERTED.Transaction_ID VALUES (@S_ID, @Date, @DueDate)";
-            cmdNewTrans.Parameters.AddWithValue("@S_ID", SelectAcc.Text.Substring(0, 1));
+            cmdNewTrans.Parameters.AddWithValue("@S_ID", SelectAcc.Text.Substring(0, 4));
             cmdNewTrans.Parameters.AddWithValue("@Date", Tdate);
             cmdNewTrans.Parameters.AddWithValue("@DueDate", Ddate);
 

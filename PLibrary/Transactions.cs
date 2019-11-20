@@ -33,7 +33,7 @@ namespace PLibrary
 
             while (reader.Read())
             {
-                SelectAcc.Items.Add(reader[0].ToString() + ", " + reader[1].ToString());
+                SelectAcc.Items.Add(reader[0].ToString() + "    " + reader[1].ToString());
             }
             reader.Close();
         }
@@ -98,7 +98,7 @@ namespace PLibrary
             tDate.Text = "";
             dDate.Text = "";
 
-            LoadTransactions(Int32.Parse(SelectAcc.Text.Substring(0,1)));
+            LoadTransactions(Int32.Parse(SelectAcc.Text.Substring(0, 4)));
         }
 
         private void SelectTrans_SelectedIndexChanged(object sender, EventArgs e)

@@ -37,7 +37,7 @@ namespace PLibrary
 
             while (reader.Read())
             {
-                SelectAcc.Items.Add(reader[0].ToString() + ", " + reader[1].ToString());
+                SelectAcc.Items.Add(reader[0].ToString() + "   " + reader[1].ToString());
             }
             reader.Close();
         }
@@ -72,6 +72,44 @@ namespace PLibrary
             cmdReturn.ExecuteNonQuery();
         }
 
+        void CheckHold(int bno)
+        {
+            int available = -1;
+
+            SqlCommand cmdHold = DBConnection2.CreateCommand();
+            cmdHold.CommandText = "SELECT Available FROM BOOK " +
+                " WHERE Book_ID = @B_ID";
+            cmdHold.Parameters.AddWithValue("@B_ID", bno);
+
+            SqlDataReader reader = cmdHold.ExecuteReader();
+
+            while (reader.Read())
+            {
+                available = Int32.Parse(reader[0].ToString());
+            }
+            reader.Close();
+
+            if ( available == 1)
+            {
+                MessageBox.Show("Book on Hold, Set Aside");
+
+                SqlCommand del = DBConnection2.CreateCommand();
+                del.CommandText = "DELETE FROM HOLD WHERE B_ID = @B_ID";
+                del.Parameters.AddWithValue("@B_ID", bno);
+
+                del.ExecuteNonQuery();
+            }
+        }
+
+        void IncrementBookCount(int bno)
+        {
+            SqlCommand cmdInc = DBConnection2.CreateCommand();
+            cmdInc.CommandText = "UPDATE BOOK SET Available = Available + 1" +
+                " WHERE Book_ID = @B_ID";
+            cmdInc.Parameters.AddWithValue("@B_ID", bno);
+            cmdInc.ExecuteNonQuery();
+        }
+
         private void SelectAcc_SelectedIndexChanged(object sender, EventArgs e)
         {
             //clear combo boxes first 
@@ -80,7 +118,7 @@ namespace PLibrary
             TransactionView.Items.Clear();
             TransactionView.ResetText();
 
-            LoadBooks(Int32.Parse(SelectAcc.Text.Substring(0, 1)));
+            LoadBooks(Int32.Parse(SelectAcc.Text.Substring(0, 4)));
 
             SelectBook.Enabled = true;
             btn_Process.Enabled = false;
@@ -104,6 +142,8 @@ namespace PLibrary
         private void Btn_Process_Click(object sender, EventArgs e)
         {
             BookReturn(Int32.Parse(TransactionView.Text), Int32.Parse(SelectBook.Text));
+            IncrementBookCount(Int32.Parse(SelectBook.Text));
+            CheckHold(Int32.Parse(SelectBook.Text));
             // remove book id and trans id that coresspond to returned book from combo boxes
             TransactionView.Text = "";
             TransactionView.Items.RemoveAt(TransactionView.SelectedIndex);
