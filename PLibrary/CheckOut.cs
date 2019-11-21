@@ -49,12 +49,12 @@ namespace PLibrary
         void LoadBooks()
         {
             SqlCommand cmdLoadBook = DBConnection2.CreateCommand();
-            cmdLoadBook.CommandText = "Select Book_ID FROM BOOK WHERE Available > 0";
+            cmdLoadBook.CommandText = "Select Book_ID, Title FROM BOOK WHERE Available > 0";
             SqlDataReader reader = cmdLoadBook.ExecuteReader();
 
             while (reader.Read())
             {
-                SelectBook.Items.Add(reader[0].ToString());
+                SelectBook.Items.Add(reader[0].ToString() + "    " + reader[1].ToString());
             }
             reader.Close();
         }
@@ -138,9 +138,9 @@ namespace PLibrary
                     trans_ID = CreateTransaction();
                 }
                 // CREATE new CONTAINS_BOOK
-                NewContains_Book(Int32.Parse(SelectBook.Text), trans_ID);
+                NewContains_Book(Int32.Parse(SelectBook.Text.Substring(0, 4)), trans_ID);
                 // Decrement 'Available'
-                DecrementBookCount(Int32.Parse(SelectBook.Text));
+                DecrementBookCount(Int32.Parse(SelectBook.Text.Substring(0, 4)));
                 LoadBooks(); //reload book id's into combobox
                 MessageBox.Show("Book Checked Out, Due in 2 weeks");
             }

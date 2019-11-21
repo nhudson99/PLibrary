@@ -45,7 +45,7 @@ namespace PLibrary
         void LoadBooks(int acc)
         {
             SqlCommand cmdLoadBook = DBConnection2.CreateCommand();
-            cmdLoadBook.CommandText = "Select Book_ID, T_ID " +
+            cmdLoadBook.CommandText = "Select Book_ID, Title, T_ID " +
                 "FROM BOOK JOIN CONTAINS_BOOK ON Book_ID = B_ID" +
                 " JOIN [TRANSACTION] ON T_ID = Transaction_ID" +
                 " WHERE (S_ID = @S_ID) AND (Returned = @r)";
@@ -55,8 +55,8 @@ namespace PLibrary
 
             while (reader.Read())
             {
-                SelectBook.Items.Add(reader[0].ToString());
-                TransactionView.Items.Add(reader[1].ToString());
+                SelectBook.Items.Add(reader[0].ToString() + "    " + reader[1].ToString());
+                TransactionView.Items.Add(reader[2].ToString());
             }
             reader.Close();
         }
@@ -131,9 +131,9 @@ namespace PLibrary
 
         private void Btn_Process_Click(object sender, EventArgs e)
         {
-            BookReturn(Int32.Parse(TransactionView.Text), Int32.Parse(SelectBook.Text));
-            IncrementBookCount(Int32.Parse(SelectBook.Text));
-            CheckHold(Int32.Parse(SelectBook.Text));
+            BookReturn(Int32.Parse(TransactionView.Text), Int32.Parse(SelectBook.Text.Substring(0, 4)));
+            IncrementBookCount(Int32.Parse(SelectBook.Text.Substring(0, 4)));
+            CheckHold(Int32.Parse(SelectBook.Text.Substring(0, 4)));
             // remove book id and trans id that coresspond to returned book from combo boxes
             TransactionView.Text = "";
             TransactionView.Items.RemoveAt(TransactionView.SelectedIndex);

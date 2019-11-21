@@ -40,7 +40,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 30);
+            this.label1.Location = new System.Drawing.Point(75, 31);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 13);
@@ -50,7 +50,7 @@
             // SelectAcc
             // 
             this.SelectAcc.FormattingEnabled = true;
-            this.SelectAcc.Location = new System.Drawing.Point(125, 27);
+            this.SelectAcc.Location = new System.Drawing.Point(174, 28);
             this.SelectAcc.Margin = new System.Windows.Forms.Padding(2);
             this.SelectAcc.Name = "SelectAcc";
             this.SelectAcc.Size = new System.Drawing.Size(163, 21);
@@ -58,7 +58,7 @@
             // 
             // btn_Start
             // 
-            this.btn_Start.Location = new System.Drawing.Point(41, 79);
+            this.btn_Start.Location = new System.Drawing.Point(90, 80);
             this.btn_Start.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Start.Name = "btn_Start";
             this.btn_Start.Size = new System.Drawing.Size(88, 45);
@@ -69,7 +69,7 @@
             // 
             // btn_End
             // 
-            this.btn_End.Location = new System.Drawing.Point(176, 78);
+            this.btn_End.Location = new System.Drawing.Point(225, 79);
             this.btn_End.Margin = new System.Windows.Forms.Padding(2);
             this.btn_End.Name = "btn_End";
             this.btn_End.Size = new System.Drawing.Size(86, 46);
@@ -81,7 +81,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 160);
+            this.label2.Location = new System.Drawing.Point(29, 142);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 13);
@@ -90,10 +90,10 @@
             // 
             // btn_Process
             // 
-            this.btn_Process.Location = new System.Drawing.Point(206, 157);
+            this.btn_Process.Location = new System.Drawing.Point(162, 185);
             this.btn_Process.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Process.Name = "btn_Process";
-            this.btn_Process.Size = new System.Drawing.Size(56, 19);
+            this.btn_Process.Size = new System.Drawing.Size(90, 51);
             this.btn_Process.TabIndex = 6;
             this.btn_Process.Text = "Process";
             this.btn_Process.UseVisualStyleBackColor = true;
@@ -102,17 +102,17 @@
             // SelectBook
             // 
             this.SelectBook.FormattingEnabled = true;
-            this.SelectBook.Location = new System.Drawing.Point(111, 156);
+            this.SelectBook.Location = new System.Drawing.Point(101, 138);
             this.SelectBook.Margin = new System.Windows.Forms.Padding(2);
             this.SelectBook.Name = "SelectBook";
-            this.SelectBook.Size = new System.Drawing.Size(92, 21);
+            this.SelectBook.Size = new System.Drawing.Size(273, 21);
             this.SelectBook.TabIndex = 7;
             // 
             // CheckOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(308, 217);
+            this.ClientSize = new System.Drawing.Size(403, 247);
             this.Controls.Add(this.SelectBook);
             this.Controls.Add(this.btn_Process);
             this.Controls.Add(this.label2);

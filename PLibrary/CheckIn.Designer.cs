@@ -40,19 +40,19 @@
             // SelectBook
             // 
             this.SelectBook.FormattingEnabled = true;
-            this.SelectBook.Location = new System.Drawing.Point(155, 92);
+            this.SelectBook.Location = new System.Drawing.Point(108, 90);
             this.SelectBook.Margin = new System.Windows.Forms.Padding(2);
             this.SelectBook.Name = "SelectBook";
-            this.SelectBook.Size = new System.Drawing.Size(92, 21);
+            this.SelectBook.Size = new System.Drawing.Size(262, 21);
             this.SelectBook.TabIndex = 14;
             this.SelectBook.SelectedIndexChanged += new System.EventHandler(this.SelectBook_SelectedIndexChanged);
             // 
             // btn_Process
             // 
-            this.btn_Process.Location = new System.Drawing.Point(265, 93);
+            this.btn_Process.Location = new System.Drawing.Point(175, 172);
             this.btn_Process.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Process.Name = "btn_Process";
-            this.btn_Process.Size = new System.Drawing.Size(56, 19);
+            this.btn_Process.Size = new System.Drawing.Size(81, 45);
             this.btn_Process.TabIndex = 13;
             this.btn_Process.Text = "Process";
             this.btn_Process.UseVisualStyleBackColor = true;
@@ -61,7 +61,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(83, 96);
+            this.label2.Location = new System.Drawing.Point(36, 94);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 13);
@@ -111,7 +111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(408, 167);
+            this.ClientSize = new System.Drawing.Size(408, 242);
             this.Controls.Add(this.TransactionView);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.SelectBook);
