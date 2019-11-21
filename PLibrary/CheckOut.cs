@@ -87,10 +87,18 @@ namespace PLibrary
             try
             {
                 cmdNew.ExecuteNonQuery();
+
+                MessageBox.Show("Book Checked Out, Due in 2 weeks");
+                // Decrement 'Available'
+                DecrementBookCount(B_ID);
+                //reload book id's into combobox
+                SelectBook.Items.Clear();
+                SelectBook.ResetText();
+                LoadBooks();
             }
             catch
             { // exception for trying to checkout 2 copies of same book in one transaction
-                MessageBox.Show("Only 1 copy per Transaction");
+                MessageBox.Show("Only 1 copy per transaction");
             }
         }
 
@@ -139,10 +147,6 @@ namespace PLibrary
                 }
                 // CREATE new CONTAINS_BOOK
                 NewContains_Book(Int32.Parse(SelectBook.Text.Substring(0, 4)), trans_ID);
-                // Decrement 'Available'
-                DecrementBookCount(Int32.Parse(SelectBook.Text.Substring(0, 4)));
-                LoadBooks(); //reload book id's into combobox
-                MessageBox.Show("Book Checked Out, Due in 2 weeks");
             }
         }
     }
