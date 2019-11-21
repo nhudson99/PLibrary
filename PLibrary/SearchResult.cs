@@ -58,45 +58,39 @@ namespace PLibrary
 
             try
             {
+                cmdLoadBook.CommandText = "SELECT Distinct Book_ID as ID, Title, Name as Author, PYear, Section, Copies, Available" +
+                    " FROM BOOK JOIN BOOK_AUTHOR ON BOOK.Book_ID = BOOK_AUTHOR.B_ID JOIN AUTHOR ON Author_ID = BOOK_AUTHOR.A_ID JOIN CATEGORY ON C_ID = Category_ID " +
+                    " WHERE 1 = 1";
+
+
                 if (id != 0)
                 {
-                    cmdLoadBook.CommandText = "SELECT Distinct Book_ID as ID, Title, Name as Author, PYear, Section, Copies, Available " +
-                    "FROM BOOK JOIN BOOK_AUTHOR ON BOOK.Book_ID = BOOK_AUTHOR.B_ID JOIN AUTHOR ON Author_ID = BOOK_AUTHOR.A_ID JOIN CATEGORY ON C_ID = Category_ID " +
-                    "WHERE Book_ID = @bookID";
-
+                    cmdLoadBook.CommandText += " AND Book_ID = @bookID";
                     cmdLoadBook.Parameters.AddWithValue("@bookID", id);
                 }
-                else if (year != 0)
+                if (year != 0)
                 {
-                    cmdLoadBook.CommandText = "SELECT Distinct Book_ID as ID, Title, Name as Author, PYear, Section, Copies, Available " +
-                    "FROM BOOK JOIN BOOK_AUTHOR ON BOOK.Book_ID = BOOK_AUTHOR.B_ID JOIN AUTHOR ON Author_ID = BOOK_AUTHOR.A_ID JOIN CATEGORY ON C_ID = Category_ID " +
-                    "WHERE PYear = @year";
+                    cmdLoadBook.CommandText += " AND PYear = @year";
 
                     cmdLoadBook.Parameters.AddWithValue("@year", year);
                 }
-                else if (!String.IsNullOrEmpty(title))
+                if (!String.IsNullOrEmpty(title))
                 {
                     //MessageBox.Show(title);
-                    cmdLoadBook.CommandText = "SELECT Distinct Book_ID as ID, Title, Name as Author, PYear, Section, Copies, Available " +
-                    "FROM BOOK JOIN BOOK_AUTHOR ON BOOK.Book_ID = BOOK_AUTHOR.B_ID JOIN AUTHOR ON Author_ID = BOOK_AUTHOR.A_ID JOIN CATEGORY ON C_ID = Category_ID " +
-                    "WHERE Title LIKE @title";
+                    cmdLoadBook.CommandText += " AND Title LIKE @title";
 
                     cmdLoadBook.Parameters.AddWithValue("@title", "%" + title + "%");
                     //MessageBox.Show(cmdLoadBook.CommandText);
                 }
-                else if (!String.IsNullOrEmpty(author))
+                if (!String.IsNullOrEmpty(author))
                 {
-                    cmdLoadBook.CommandText = "SELECT Distinct Book_ID as ID, Title, Name as Author, PYear, Section, Copies, Available " +
-                    "FROM BOOK JOIN BOOK_AUTHOR ON BOOK.Book_ID = BOOK_AUTHOR.B_ID JOIN AUTHOR ON Author_ID = BOOK_AUTHOR.A_ID JOIN CATEGORY ON C_ID = Category_ID " +
-                    "WHERE Name LIKE @author";
+                    cmdLoadBook.CommandText += " AND Name LIKE @author";
 
                     cmdLoadBook.Parameters.AddWithValue("@author", "%" + author + "%");
                 }
-                else if (!String.IsNullOrEmpty(category))
+                if (!String.IsNullOrEmpty(category))
                 {
-                    cmdLoadBook.CommandText = "SELECT Distinct Book_ID as ID, Title, Name as Author, PYear, Section, Copies, Available " +
-                    "FROM BOOK JOIN BOOK_AUTHOR ON BOOK.Book_ID = BOOK_AUTHOR.B_ID JOIN AUTHOR ON Author_ID = BOOK_AUTHOR.A_ID JOIN CATEGORY ON C_ID = Category_ID " +
-                    "WHERE Cname LIKE @category";
+                    cmdLoadBook.CommandText += " AND Cname LIKE @category";
 
                     cmdLoadBook.Parameters.AddWithValue("@category", "%" + category + "%");
                 }
@@ -108,19 +102,18 @@ namespace PLibrary
 
                 if (!reader.HasRows)
                 {
-                    throw new SearchError();
+                    // throw new SearchError();
+
+                    MessageBox.Show("No Book Found");
+                    dataGridSearchResults.ClearSelection();
+                    reader.Close();
+                    this.Close();
                 }
 
                 tempTable.Load(reader);
 
                 dataGridSearchResults.DataSource = tempTable;
                 reader.Close();
-            }
-            catch(SearchError error)
-            {
-                MessageBox.Show("No Book Found");
-                dataGridSearchResults.ClearSelection();
-                this.Close();
             }
             catch(Exception ex)
             {

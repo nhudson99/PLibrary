@@ -156,6 +156,10 @@ namespace PLibrary
                 {
                     MessageBox.Show("All fields except for ID must have a value");
                 }
+                else if (txtCopies.Text != txtAvailable.Text)
+                {
+                    MessageBox.Show("# of copies and available must be the same");
+                }
                 else
                 {
                     
@@ -269,6 +273,12 @@ namespace PLibrary
         {
             if (txtID.Text == "")
             {
+                return;
+            }
+            if (Int32.Parse(txtAvailable.Text) > Int32.Parse(txtCopies.Text)) 
+            {
+                MessageBox.Show("# availabe can't be greater then " +
+                    "3 of copies");
                 return;
             }
             SqlCommand cmdEditBook = DBConnection.CreateCommand();
