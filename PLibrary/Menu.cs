@@ -32,7 +32,7 @@ namespace PLibrary
                 sqlConnection.Open();*/
 
                 sqlConnection.ConnectionString =
-                    "Data Source=NATE-SURFACE;" +
+                    "Data Source=SHIRISH;" +
                     "Initial Catalog=PLibrary;" +
                     "Integrated Security=True";
                 sqlConnection.Open();
@@ -72,6 +72,14 @@ namespace PLibrary
             frm.Show();
         }
 
-       
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
