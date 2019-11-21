@@ -260,7 +260,7 @@ namespace PLibrary
                     cmdAddBookAuthor.ExecuteNonQuery();
                     
                     
-                    MessageBox.Show("Book Added");
+                    MessageBox.Show("Book Added, ID is " + bID.ToString());
                 }
             }
             catch (Exception ex)
