@@ -267,6 +267,10 @@ namespace PLibrary
 
         private void btnCompleteEdit_Click(object sender, EventArgs e)
         {
+            if (txtID.Text == "")
+            {
+                return;
+            }
             SqlCommand cmdEditBook = DBConnection.CreateCommand();
             cmdEditBook.CommandText = "UPDATE BOOK SET Title = @title, PYear = @year, " +
                                       "C_ID = (SELECT Category_ID FROM CATEGORY WHERE Cname = @category) ,Copies = @copies, Available = @available WHERE Book_ID = @bID";
@@ -376,6 +380,7 @@ namespace PLibrary
 
 
                     MessageBox.Show("1 book deleted");
+                    ClearControls();
                 }
                 
             }
