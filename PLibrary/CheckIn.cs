@@ -74,22 +74,12 @@ namespace PLibrary
 
         void CheckHold(int bno)
         {
-            int available = -1;
-
             SqlCommand cmdHold = DBConnection2.CreateCommand();
-            cmdHold.CommandText = "SELECT Available FROM BOOK " +
-                " WHERE Book_ID = @B_ID";
+            cmdHold.CommandText = "SELECT COUNT(*) FROM HOLD " +
+                " WHERE B_ID = @B_ID";
             cmdHold.Parameters.AddWithValue("@B_ID", bno);
 
-            SqlDataReader reader = cmdHold.ExecuteReader();
-
-            while (reader.Read())
-            {
-                available = Int32.Parse(reader[0].ToString());
-            }
-            reader.Close();
-
-            if ( available == 1)
+            if((int)cmdHold.ExecuteScalar() > 0)
             {
                 MessageBox.Show("Book on Hold, Set Aside");
 
@@ -98,7 +88,7 @@ namespace PLibrary
                 del.Parameters.AddWithValue("@B_ID", bno);
 
                 del.ExecuteNonQuery();
-            }
+            } 
         }
 
         void IncrementBookCount(int bno)
