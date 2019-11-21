@@ -146,6 +146,7 @@ namespace PLibrary
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            int year = 0, numC = 0, numA = 0;
             try
             {
                 if (!string.IsNullOrEmpty(txtID.Text))
@@ -159,6 +160,18 @@ namespace PLibrary
                 else if (txtCopies.Text != txtAvailable.Text)
                 {
                     MessageBox.Show("# of copies and available must be the same");
+                }
+                else if (!(Int32.TryParse(txtYear.Text, out year)))
+                {
+                    MessageBox.Show("Invalid year value");
+                }
+                else if (!(Int32.TryParse(txtCopies.Text, out numC)))
+                {
+                    MessageBox.Show("Invalid copies value");
+                }
+                else if (!(Int32.TryParse(txtAvailable.Text, out numA)))
+                {
+                    MessageBox.Show("Invalid available value");
                 }
                 else
                 {
