@@ -198,10 +198,10 @@ namespace PLibrary
 
                     cmdAddBook.CommandText = "INSERT INTO BOOK VALUES (@title,@year,@cID,@copies,@available)";
                     cmdAddBook.Parameters.AddWithValue("@title", txtTitle.Text);
-                    cmdAddBook.Parameters.AddWithValue("@year", txtYear.Text);
+                    cmdAddBook.Parameters.AddWithValue("@year", year);
                     cmdAddBook.Parameters.AddWithValue("@cID", cID);
-                    cmdAddBook.Parameters.AddWithValue("@copies", txtCopies.Text);
-                    cmdAddBook.Parameters.AddWithValue("@available", txtAvailable.Text);
+                    cmdAddBook.Parameters.AddWithValue("@copies", numC);
+                    cmdAddBook.Parameters.AddWithValue("@available", numA);
 
                     cmdAddBook.ExecuteNonQuery();
 
@@ -288,6 +288,8 @@ namespace PLibrary
             {
                 return;
             }
+
+
             if (Int32.Parse(txtAvailable.Text) > Int32.Parse(txtCopies.Text)) 
             {
                 MessageBox.Show("# availabe can't be greater then " +
