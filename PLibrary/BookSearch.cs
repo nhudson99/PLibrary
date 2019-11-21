@@ -87,11 +87,25 @@ namespace PLibrary
             else
             {
                 int year = 0, id = 0;
+                Boolean tf;
 
-                if (!String.IsNullOrEmpty(txtBookYear.Text))
-                    year = int.Parse(txtBookYear.Text);
-                if (!String.IsNullOrEmpty(txtBookID.Text))
-                    id = int.Parse(txtBookID.Text);
+                if (!String.IsNullOrEmpty(txtBookYear.Text) && !(Int32.TryParse(txtBookYear.Text,out year)))
+                {
+                    MessageBox.Show("Invalid year");
+                    return;
+                }
+                    
+                if (!String.IsNullOrEmpty(txtBookID.Text) && !(Int32.TryParse(txtBookID.Text, out id)))
+                {
+                    MessageBox.Show("Invalid id");
+                    return;
+                }
+
+
+                //if (!String.IsNullOrEmpty(txtBookYear.Text))
+                //   year = int.Parse(txtBookYear.Text);
+                //   if (!String.IsNullOrEmpty(txtBookID.Text))
+                //     id = int.Parse(txtBookID.Text);
 
                 SearchResult result = new SearchResult(txtBookTitle.Text, txtBookAuthor.Text, comboCategory.Text, year, id);
                 result.DBConnection2 = DBConnection;
