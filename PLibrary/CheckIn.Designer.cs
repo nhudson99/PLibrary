@@ -74,7 +74,7 @@
             this.SelectAcc.Location = new System.Drawing.Point(175, 44);
             this.SelectAcc.Margin = new System.Windows.Forms.Padding(2);
             this.SelectAcc.Name = "SelectAcc";
-            this.SelectAcc.Size = new System.Drawing.Size(122, 21);
+            this.SelectAcc.Size = new System.Drawing.Size(146, 21);
             this.SelectAcc.TabIndex = 9;
             this.SelectAcc.SelectedIndexChanged += new System.EventHandler(this.SelectAcc_SelectedIndexChanged);
             // 
@@ -111,7 +111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(379, 167);
+            this.ClientSize = new System.Drawing.Size(408, 167);
             this.Controls.Add(this.TransactionView);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.SelectBook);

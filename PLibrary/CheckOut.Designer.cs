@@ -40,7 +40,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 30);
+            this.label1.Location = new System.Drawing.Point(26, 30);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 13);
@@ -50,16 +50,16 @@
             // SelectAcc
             // 
             this.SelectAcc.FormattingEnabled = true;
-            this.SelectAcc.Location = new System.Drawing.Point(134, 27);
-            this.SelectAcc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SelectAcc.Location = new System.Drawing.Point(125, 27);
+            this.SelectAcc.Margin = new System.Windows.Forms.Padding(2);
             this.SelectAcc.Name = "SelectAcc";
-            this.SelectAcc.Size = new System.Drawing.Size(122, 21);
+            this.SelectAcc.Size = new System.Drawing.Size(163, 21);
             this.SelectAcc.TabIndex = 1;
             // 
             // btn_Start
             // 
             this.btn_Start.Location = new System.Drawing.Point(41, 79);
-            this.btn_Start.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Start.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Start.Name = "btn_Start";
             this.btn_Start.Size = new System.Drawing.Size(88, 45);
             this.btn_Start.TabIndex = 2;
@@ -70,7 +70,7 @@
             // btn_End
             // 
             this.btn_End.Location = new System.Drawing.Point(176, 78);
-            this.btn_End.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_End.Margin = new System.Windows.Forms.Padding(2);
             this.btn_End.Name = "btn_End";
             this.btn_End.Size = new System.Drawing.Size(86, 46);
             this.btn_End.TabIndex = 3;
@@ -91,7 +91,7 @@
             // btn_Process
             // 
             this.btn_Process.Location = new System.Drawing.Point(206, 157);
-            this.btn_Process.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Process.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Process.Name = "btn_Process";
             this.btn_Process.Size = new System.Drawing.Size(56, 19);
             this.btn_Process.TabIndex = 6;
@@ -103,7 +103,7 @@
             // 
             this.SelectBook.FormattingEnabled = true;
             this.SelectBook.Location = new System.Drawing.Point(111, 156);
-            this.SelectBook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SelectBook.Margin = new System.Windows.Forms.Padding(2);
             this.SelectBook.Name = "SelectBook";
             this.SelectBook.Size = new System.Drawing.Size(92, 21);
             this.SelectBook.TabIndex = 7;

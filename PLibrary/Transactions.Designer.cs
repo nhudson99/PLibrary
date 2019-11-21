@@ -35,9 +35,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.Books = new System.Windows.Forms.TextBox();
+            this.BookTitle = new System.Windows.Forms.TextBox();
             this.tDate = new System.Windows.Forms.TextBox();
             this.dDate = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.BookAuthor = new System.Windows.Forms.TextBox();
+            this.Returned = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // SelectAcc
@@ -45,8 +50,9 @@
             this.SelectAcc.FormattingEnabled = true;
             this.SelectAcc.Location = new System.Drawing.Point(21, 31);
             this.SelectAcc.Name = "SelectAcc";
-            this.SelectAcc.Size = new System.Drawing.Size(121, 21);
+            this.SelectAcc.Size = new System.Drawing.Size(195, 21);
             this.SelectAcc.TabIndex = 0;
+            this.SelectAcc.SelectedIndexChanged += new System.EventHandler(this.SelectAcc_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -60,7 +66,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(163, 15);
+            this.label2.Location = new System.Drawing.Point(278, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 2;
@@ -69,10 +75,11 @@
             // SelectTrans
             // 
             this.SelectTrans.FormattingEnabled = true;
-            this.SelectTrans.Location = new System.Drawing.Point(166, 31);
+            this.SelectTrans.Location = new System.Drawing.Point(281, 31);
             this.SelectTrans.Name = "SelectTrans";
             this.SelectTrans.Size = new System.Drawing.Size(121, 21);
             this.SelectTrans.TabIndex = 3;
+            this.SelectTrans.SelectedIndexChanged += new System.EventHandler(this.SelectTrans_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -101,36 +108,84 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Book(s)";
             // 
-            // Books
+            // BookTitle
             // 
-            this.Books.Location = new System.Drawing.Point(25, 160);
-            this.Books.Multiline = true;
-            this.Books.Name = "Books";
-            this.Books.Size = new System.Drawing.Size(343, 251);
-            this.Books.TabIndex = 7;
+            this.BookTitle.Location = new System.Drawing.Point(25, 178);
+            this.BookTitle.Multiline = true;
+            this.BookTitle.Name = "BookTitle";
+            this.BookTitle.Size = new System.Drawing.Size(229, 401);
+            this.BookTitle.TabIndex = 7;
             // 
             // tDate
             // 
             this.tDate.Location = new System.Drawing.Point(21, 105);
             this.tDate.Name = "tDate";
-            this.tDate.Size = new System.Drawing.Size(100, 20);
+            this.tDate.Size = new System.Drawing.Size(121, 20);
             this.tDate.TabIndex = 8;
             // 
             // dDate
             // 
             this.dDate.Location = new System.Drawing.Point(166, 105);
             this.dDate.Name = "dDate";
-            this.dDate.Size = new System.Drawing.Size(100, 20);
+            this.dDate.Size = new System.Drawing.Size(121, 20);
             this.dDate.TabIndex = 9;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(22, 162);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(27, 13);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Title";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(278, 162);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(38, 13);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Author";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(534, 162);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(57, 13);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Returned?";
+            // 
+            // BookAuthor
+            // 
+            this.BookAuthor.Location = new System.Drawing.Point(281, 178);
+            this.BookAuthor.Multiline = true;
+            this.BookAuthor.Name = "BookAuthor";
+            this.BookAuthor.Size = new System.Drawing.Size(229, 401);
+            this.BookAuthor.TabIndex = 13;
+            // 
+            // Returned
+            // 
+            this.Returned.Location = new System.Drawing.Point(537, 178);
+            this.Returned.Multiline = true;
+            this.Returned.Name = "Returned";
+            this.Returned.Size = new System.Drawing.Size(60, 401);
+            this.Returned.TabIndex = 14;
             // 
             // Transactions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 591);
+            this.Controls.Add(this.Returned);
+            this.Controls.Add(this.BookAuthor);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.dDate);
             this.Controls.Add(this.tDate);
-            this.Controls.Add(this.Books);
+            this.Controls.Add(this.BookTitle);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -140,6 +195,7 @@
             this.Controls.Add(this.SelectAcc);
             this.Name = "Transactions";
             this.Text = "Transactions";
+            this.Load += new System.EventHandler(this.Transactions_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,8 +210,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox Books;
+        private System.Windows.Forms.TextBox BookTitle;
         private System.Windows.Forms.TextBox tDate;
         private System.Windows.Forms.TextBox dDate;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox BookAuthor;
+        private System.Windows.Forms.TextBox Returned;
     }
 }

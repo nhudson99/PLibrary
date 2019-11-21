@@ -36,12 +36,12 @@ namespace PLibrary
         void LoadAccounts()
         {
             SqlCommand cmdLoadAcc = DBConnection2.CreateCommand();
-            cmdLoadAcc.CommandText = "Select Student_ID FROM  STUDENT";
+            cmdLoadAcc.CommandText = "Select Student_ID, Fname FROM  STUDENT";
             SqlDataReader reader = cmdLoadAcc.ExecuteReader();
 
             while (reader.Read())
             {
-                SelectAcc.Items.Add(reader[0].ToString());
+                SelectAcc.Items.Add(reader[0].ToString() + "   " + reader[1].ToString());
             }
             reader.Close();
         }
@@ -67,7 +67,7 @@ namespace PLibrary
             SqlCommand cmdNewTrans = DBConnection2.CreateCommand();
             cmdNewTrans.CommandText = "INSERT INTO [TRANSACTION] (S_ID, Date, DueDate)";
             cmdNewTrans.CommandText += " OUTPUT INSERTED.Transaction_ID VALUES (@S_ID, @Date, @DueDate)";
-            cmdNewTrans.Parameters.AddWithValue("@S_ID", SelectAcc.Text);
+            cmdNewTrans.Parameters.AddWithValue("@S_ID", SelectAcc.Text.Substring(0, 4));
             cmdNewTrans.Parameters.AddWithValue("@Date", Tdate);
             cmdNewTrans.Parameters.AddWithValue("@DueDate", Ddate);
 
@@ -136,13 +136,13 @@ namespace PLibrary
                 if (books == 1)
                 {   // CREATE new TRANSACTION for DB, get the auto-generated id
                     trans_ID = CreateTransaction();
-                    MessageBox.Show(trans_ID.ToString());
                 }
-                // CREATE new CONATINS_BOOK
+                // CREATE new CONTAINS_BOOK
                 NewContains_Book(Int32.Parse(SelectBook.Text), trans_ID);
                 // Decrement 'Available'
                 DecrementBookCount(Int32.Parse(SelectBook.Text));
                 LoadBooks(); //reload book id's into combobox
+                MessageBox.Show("Book Checked Out, Due in 2 weeks");
             }
         }
     }
