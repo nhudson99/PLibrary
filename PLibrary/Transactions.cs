@@ -112,6 +112,5 @@ namespace PLibrary
             LoadBooks(Int32.Parse(SelectTrans.Text));
         }
 
-
     }
 }

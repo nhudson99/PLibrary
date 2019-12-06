@@ -13,15 +13,14 @@ namespace PLibrary
             InitializeComponent();
 
         }
-        private void ProcessBooks_Load(object sender, EventArgs e)
-        {
-
-        }
+  
         private void Btn_CheckOut_Click(object sender, EventArgs e)
         {
             CheckOut frm = new CheckOut();
             frm.DBConnection2 = DBConnection;
             frm.Show();
+
+            this.Close();
         }
 
         private void Btn_CheckIn_Click(object sender, EventArgs e)
@@ -29,6 +28,8 @@ namespace PLibrary
             CheckIn frm = new CheckIn();
             frm.DBConnection2 = DBConnection;
             frm.Show();
+
+            this.Close();
         }
 
         private void Btn_PlaceHold_Click(object sender, EventArgs e)
@@ -36,6 +37,8 @@ namespace PLibrary
             PlaceHold frm = new PlaceHold();
             frm.DBConnection2 = DBConnection;
             frm.Show();
+
+            this.Close();
         }
 
         

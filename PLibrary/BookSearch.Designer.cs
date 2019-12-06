@@ -45,94 +45,116 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(406, 77);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(104, 37);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(353, 25);
+            this.label1.Size = new System.Drawing.Size(443, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Search for Book Using Fields below";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(248, 171);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(87, 102);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 25);
+            this.label2.Size = new System.Drawing.Size(52, 26);
             this.label2.TabIndex = 1;
             this.label2.Text = "Title";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(220, 235);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(67, 155);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 25);
+            this.label3.Size = new System.Drawing.Size(82, 26);
             this.label3.TabIndex = 2;
             this.label3.Text = "Author ";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(202, 300);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(39, 203);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 25);
+            this.label4.Size = new System.Drawing.Size(100, 26);
             this.label4.TabIndex = 3;
             this.label4.Text = "Category";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(243, 359);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(80, 255);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 25);
+            this.label5.Size = new System.Drawing.Size(59, 26);
             this.label5.TabIndex = 4;
             this.label5.Text = "Year";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(214, 431);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(49, 298);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(87, 25);
+            this.label6.Size = new System.Drawing.Size(90, 26);
             this.label6.TabIndex = 5;
             this.label6.Text = "Book ID";
             // 
             // txtBookTitle
             // 
-            this.txtBookTitle.Location = new System.Drawing.Point(411, 165);
+            this.txtBookTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBookTitle.Location = new System.Drawing.Point(153, 100);
+            this.txtBookTitle.Margin = new System.Windows.Forms.Padding(2);
             this.txtBookTitle.Name = "txtBookTitle";
-            this.txtBookTitle.Size = new System.Drawing.Size(343, 31);
+            this.txtBookTitle.Size = new System.Drawing.Size(419, 29);
             this.txtBookTitle.TabIndex = 6;
             this.txtBookTitle.TextChanged += new System.EventHandler(this.txtBookTitle_TextChanged);
             // 
             // txtBookAuthor
             // 
-            this.txtBookAuthor.Location = new System.Drawing.Point(411, 229);
+            this.txtBookAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBookAuthor.Location = new System.Drawing.Point(153, 152);
+            this.txtBookAuthor.Margin = new System.Windows.Forms.Padding(2);
             this.txtBookAuthor.Name = "txtBookAuthor";
-            this.txtBookAuthor.Size = new System.Drawing.Size(343, 31);
+            this.txtBookAuthor.Size = new System.Drawing.Size(419, 29);
             this.txtBookAuthor.TabIndex = 7;
             this.txtBookAuthor.TextChanged += new System.EventHandler(this.txtBookAuthor_TextChanged);
             // 
             // txtBookYear
             // 
-            this.txtBookYear.Location = new System.Drawing.Point(411, 356);
+            this.txtBookYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBookYear.Location = new System.Drawing.Point(153, 252);
+            this.txtBookYear.Margin = new System.Windows.Forms.Padding(2);
             this.txtBookYear.Name = "txtBookYear";
-            this.txtBookYear.Size = new System.Drawing.Size(343, 31);
+            this.txtBookYear.Size = new System.Drawing.Size(96, 29);
             this.txtBookYear.TabIndex = 9;
             this.txtBookYear.TextChanged += new System.EventHandler(this.txtBookYear_TextChanged);
             // 
             // txtBookID
             // 
-            this.txtBookID.Location = new System.Drawing.Point(411, 425);
+            this.txtBookID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBookID.Location = new System.Drawing.Point(153, 298);
+            this.txtBookID.Margin = new System.Windows.Forms.Padding(2);
             this.txtBookID.Name = "txtBookID";
-            this.txtBookID.Size = new System.Drawing.Size(343, 31);
+            this.txtBookID.Size = new System.Drawing.Size(96, 29);
             this.txtBookID.TabIndex = 10;
             this.txtBookID.TextChanged += new System.EventHandler(this.txtBookID_TextChanged);
             // 
             // btnSearchBook
             // 
-            this.btnSearchBook.Location = new System.Drawing.Point(498, 559);
+            this.btnSearchBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchBook.Location = new System.Drawing.Point(296, 252);
+            this.btnSearchBook.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearchBook.Name = "btnSearchBook";
-            this.btnSearchBook.Size = new System.Drawing.Size(144, 47);
+            this.btnSearchBook.Size = new System.Drawing.Size(236, 75);
             this.btnSearchBook.TabIndex = 11;
             this.btnSearchBook.Text = "Search";
             this.btnSearchBook.UseVisualStyleBackColor = true;
@@ -140,18 +162,20 @@
             // 
             // comboCategory
             // 
+            this.comboCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboCategory.FormattingEnabled = true;
-            this.comboCategory.Location = new System.Drawing.Point(411, 297);
+            this.comboCategory.Location = new System.Drawing.Point(153, 201);
+            this.comboCategory.Margin = new System.Windows.Forms.Padding(2);
             this.comboCategory.Name = "comboCategory";
-            this.comboCategory.Size = new System.Drawing.Size(343, 33);
+            this.comboCategory.Size = new System.Drawing.Size(419, 32);
             this.comboCategory.TabIndex = 12;
             this.comboCategory.SelectedIndexChanged += new System.EventHandler(this.comboCategory_SelectedIndexChanged);
             // 
             // BookSearch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1237, 757);
+            this.ClientSize = new System.Drawing.Size(628, 373);
             this.Controls.Add(this.comboCategory);
             this.Controls.Add(this.btnSearchBook);
             this.Controls.Add(this.txtBookID);
@@ -164,6 +188,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "BookSearch";
             this.Text = "BookSearch";
             this.Load += new System.EventHandler(this.BookSearch_Load);

@@ -57,6 +57,7 @@ namespace PLibrary
             ProcessBooks frm = new ProcessBooks();
             frm.DBConnection = sqlConnection;
             frm.Show();
+
         }
 
         private void btnTransaction_Click(object sender, EventArgs e)

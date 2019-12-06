@@ -36,10 +36,9 @@
             // 
             // btn_CheckOut
             // 
-            this.btn_CheckOut.Location = new System.Drawing.Point(61, 96);
-            this.btn_CheckOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_CheckOut.Location = new System.Drawing.Point(46, 78);
             this.btn_CheckOut.Name = "btn_CheckOut";
-            this.btn_CheckOut.Size = new System.Drawing.Size(136, 78);
+            this.btn_CheckOut.Size = new System.Drawing.Size(102, 63);
             this.btn_CheckOut.TabIndex = 0;
             this.btn_CheckOut.Text = "Check Out";
             this.btn_CheckOut.UseVisualStyleBackColor = true;
@@ -47,10 +46,9 @@
             // 
             // btn_CheckIn
             // 
-            this.btn_CheckIn.Location = new System.Drawing.Point(269, 98);
-            this.btn_CheckIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_CheckIn.Location = new System.Drawing.Point(202, 80);
             this.btn_CheckIn.Name = "btn_CheckIn";
-            this.btn_CheckIn.Size = new System.Drawing.Size(136, 75);
+            this.btn_CheckIn.Size = new System.Drawing.Size(102, 61);
             this.btn_CheckIn.TabIndex = 1;
             this.btn_CheckIn.Text = "Check In";
             this.btn_CheckIn.UseVisualStyleBackColor = true;
@@ -58,10 +56,9 @@
             // 
             // btn_PlaceHold
             // 
-            this.btn_PlaceHold.Location = new System.Drawing.Point(468, 96);
-            this.btn_PlaceHold.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_PlaceHold.Location = new System.Drawing.Point(351, 78);
             this.btn_PlaceHold.Name = "btn_PlaceHold";
-            this.btn_PlaceHold.Size = new System.Drawing.Size(136, 78);
+            this.btn_PlaceHold.Size = new System.Drawing.Size(102, 63);
             this.btn_PlaceHold.TabIndex = 2;
             this.btn_PlaceHold.Text = "Place Hold";
             this.btn_PlaceHold.UseVisualStyleBackColor = true;
@@ -71,8 +68,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label1.Location = new System.Drawing.Point(249, 33);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(187, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(146, 24);
             this.label1.TabIndex = 3;
@@ -80,17 +76,16 @@
             // 
             // ProcessBooks
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(673, 201);
+            this.ClientSize = new System.Drawing.Size(505, 177);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_PlaceHold);
             this.Controls.Add(this.btn_CheckIn);
             this.Controls.Add(this.btn_CheckOut);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ProcessBooks";
             this.Text = "ProcessBooks";
-            this.Load += new System.EventHandler(this.ProcessBooks_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

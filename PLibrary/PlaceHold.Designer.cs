@@ -37,20 +37,22 @@
             // 
             // SelectBook
             // 
+            this.SelectBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SelectBook.FormattingEnabled = true;
-            this.SelectBook.Location = new System.Drawing.Point(139, 106);
+            this.SelectBook.Location = new System.Drawing.Point(239, 79);
             this.SelectBook.Margin = new System.Windows.Forms.Padding(2);
             this.SelectBook.Name = "SelectBook";
-            this.SelectBook.Size = new System.Drawing.Size(228, 21);
+            this.SelectBook.Size = new System.Drawing.Size(228, 32);
             this.SelectBook.TabIndex = 19;
             this.SelectBook.SelectedIndexChanged += new System.EventHandler(this.SelectBook_SelectedIndexChanged);
             // 
             // btn_Process
             // 
-            this.btn_Process.Location = new System.Drawing.Point(188, 144);
+            this.btn_Process.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Process.Location = new System.Drawing.Point(186, 140);
             this.btn_Process.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Process.Name = "btn_Process";
-            this.btn_Process.Size = new System.Drawing.Size(89, 42);
+            this.btn_Process.Size = new System.Drawing.Size(233, 51);
             this.btn_Process.TabIndex = 18;
             this.btn_Process.Text = "Process";
             this.btn_Process.UseVisualStyleBackColor = true;
@@ -59,30 +61,33 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(60, 110);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(75, 81);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 13);
+            this.label2.Size = new System.Drawing.Size(148, 26);
             this.label2.TabIndex = 17;
             this.label2.Text = "Enter Book ID";
             // 
             // SelectAcc
             // 
+            this.SelectAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SelectAcc.FormattingEnabled = true;
-            this.SelectAcc.Location = new System.Drawing.Point(188, 63);
+            this.SelectAcc.Location = new System.Drawing.Point(239, 29);
             this.SelectAcc.Margin = new System.Windows.Forms.Padding(2);
             this.SelectAcc.Name = "SelectAcc";
-            this.SelectAcc.Size = new System.Drawing.Size(146, 21);
+            this.SelectAcc.Size = new System.Drawing.Size(324, 32);
             this.SelectAcc.TabIndex = 16;
             this.SelectAcc.SelectedIndexChanged += new System.EventHandler(this.SelectAcc_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(89, 66);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(35, 31);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 13);
+            this.label1.Size = new System.Drawing.Size(188, 26);
             this.label1.TabIndex = 15;
             this.label1.Text = "Select an Account";
             // 
@@ -90,7 +95,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 221);
+            this.ClientSize = new System.Drawing.Size(604, 224);
             this.Controls.Add(this.SelectBook);
             this.Controls.Add(this.btn_Process);
             this.Controls.Add(this.label2);

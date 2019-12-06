@@ -39,20 +39,22 @@
             // 
             // SelectBook
             // 
+            this.SelectBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SelectBook.FormattingEnabled = true;
-            this.SelectBook.Location = new System.Drawing.Point(108, 90);
+            this.SelectBook.Location = new System.Drawing.Point(261, 118);
             this.SelectBook.Margin = new System.Windows.Forms.Padding(2);
             this.SelectBook.Name = "SelectBook";
-            this.SelectBook.Size = new System.Drawing.Size(262, 21);
+            this.SelectBook.Size = new System.Drawing.Size(262, 32);
             this.SelectBook.TabIndex = 14;
             this.SelectBook.SelectedIndexChanged += new System.EventHandler(this.SelectBook_SelectedIndexChanged);
             // 
             // btn_Process
             // 
-            this.btn_Process.Location = new System.Drawing.Point(175, 172);
+            this.btn_Process.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Process.Location = new System.Drawing.Point(183, 224);
             this.btn_Process.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Process.Name = "btn_Process";
-            this.btn_Process.Size = new System.Drawing.Size(81, 45);
+            this.btn_Process.Size = new System.Drawing.Size(273, 56);
             this.btn_Process.TabIndex = 13;
             this.btn_Process.Text = "Process";
             this.btn_Process.UseVisualStyleBackColor = true;
@@ -61,37 +63,41 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 94);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(109, 120);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 13);
+            this.label2.Size = new System.Drawing.Size(148, 26);
             this.label2.TabIndex = 12;
             this.label2.Text = "Enter Book ID";
             // 
             // SelectAcc
             // 
+            this.SelectAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SelectAcc.FormattingEnabled = true;
-            this.SelectAcc.Location = new System.Drawing.Point(175, 44);
+            this.SelectAcc.Location = new System.Drawing.Point(261, 45);
             this.SelectAcc.Margin = new System.Windows.Forms.Padding(2);
             this.SelectAcc.Name = "SelectAcc";
-            this.SelectAcc.Size = new System.Drawing.Size(146, 21);
+            this.SelectAcc.Size = new System.Drawing.Size(328, 32);
             this.SelectAcc.TabIndex = 9;
             this.SelectAcc.SelectedIndexChanged += new System.EventHandler(this.SelectAcc_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(76, 47);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(69, 47);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 13);
+            this.label1.Size = new System.Drawing.Size(188, 26);
             this.label1.TabIndex = 8;
             this.label1.Text = "Select an Account";
             // 
             // TransactionView
             // 
+            this.TransactionView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TransactionView.FormattingEnabled = true;
-            this.TransactionView.Location = new System.Drawing.Point(164, 131);
+            this.TransactionView.Location = new System.Drawing.Point(261, 176);
             this.TransactionView.Margin = new System.Windows.Forms.Padding(2);
             this.TransactionView.Name = "TransactionView";
             this.TransactionView.Size = new System.Drawing.Size(92, 21);
@@ -100,7 +106,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(83, 134);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(180, 179);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 13);
@@ -111,7 +118,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(408, 242);
+            this.ClientSize = new System.Drawing.Size(660, 321);
             this.Controls.Add(this.TransactionView);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.SelectBook);
