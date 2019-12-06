@@ -116,7 +116,6 @@
             this.txtBookTitle.Name = "txtBookTitle";
             this.txtBookTitle.Size = new System.Drawing.Size(419, 29);
             this.txtBookTitle.TabIndex = 6;
-            this.txtBookTitle.TextChanged += new System.EventHandler(this.txtBookTitle_TextChanged);
             // 
             // txtBookAuthor
             // 
@@ -126,7 +125,6 @@
             this.txtBookAuthor.Name = "txtBookAuthor";
             this.txtBookAuthor.Size = new System.Drawing.Size(419, 29);
             this.txtBookAuthor.TabIndex = 7;
-            this.txtBookAuthor.TextChanged += new System.EventHandler(this.txtBookAuthor_TextChanged);
             // 
             // txtBookYear
             // 
@@ -136,7 +134,6 @@
             this.txtBookYear.Name = "txtBookYear";
             this.txtBookYear.Size = new System.Drawing.Size(96, 29);
             this.txtBookYear.TabIndex = 9;
-            this.txtBookYear.TextChanged += new System.EventHandler(this.txtBookYear_TextChanged);
             // 
             // txtBookID
             // 
@@ -146,7 +143,6 @@
             this.txtBookID.Name = "txtBookID";
             this.txtBookID.Size = new System.Drawing.Size(96, 29);
             this.txtBookID.TabIndex = 10;
-            this.txtBookID.TextChanged += new System.EventHandler(this.txtBookID_TextChanged);
             // 
             // btnSearchBook
             // 
@@ -169,7 +165,6 @@
             this.comboCategory.Name = "comboCategory";
             this.comboCategory.Size = new System.Drawing.Size(419, 32);
             this.comboCategory.TabIndex = 12;
-            this.comboCategory.SelectedIndexChanged += new System.EventHandler(this.comboCategory_SelectedIndexChanged);
             // 
             // BookSearch
             // 
